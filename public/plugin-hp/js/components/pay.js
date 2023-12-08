@@ -39,7 +39,7 @@ function paypage(scheme) {
  * @param {*} target append 대상
  * @param {*} data 선택한 구독 데이터
  */
-function appendSubscribeTable(target, data) { console.log(data);
+function appendSubscribeTable(target, data) { 
     const selectType = data.type;
     const option = data.option;
 
@@ -73,7 +73,7 @@ function appendSubscribeTable(target, data) { console.log(data);
     BX.component(schemes.payBtn).appendTo(target);
 
     const appdx = `* By purchasing, you acknowledge that your subscription will renew annually unless you switch to manual renewal.<br>
-* 30-day money back guarantee. For refund inquiries, please contact ${homepage.adminEmail}<br>
+* 7-day money back guarantee. For refund inquiries, please contact ${homepage.adminEmail}<br>
 * If you're already subscribed, your final payment may vary depending on whether the subscription plan you choose is a renewal or upgrade, so please check at checkout.`;
     
     box().appendTo(target).width('100%').wordBreak('keep-all').html(appdx).padding('0 20px').fontSize(12).marginTop(20).textColor('gray').textAlign('justify').maxWidth(1100);

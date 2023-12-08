@@ -7,7 +7,7 @@ let auth;
 
 function initAuth(fn) {
   if(!bsb) {
-    axios.post('/node/config')
+    axios.post('/payple/config')
     .then(res => {
         const firebaseConfig = res.data;
         bsb = firebase.initializeApp(firebaseConfig);
@@ -56,7 +56,7 @@ function signOutAuth() {
  */
 function openForgotForm(e) {
   const parentClassName = $(e.target).parents('.checkoutForm').parent()[0].className.split('box ')[1];
-  console.log(parentClassName)
+
   $(`.${parentClassName} .checkoutForm`).hide();
   BX.component(accountSchemes.resetPassword).appendTo($(`.${parentClassName}`)[0]);
 }

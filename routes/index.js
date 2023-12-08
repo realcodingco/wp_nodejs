@@ -49,7 +49,7 @@ router.post('/auth', async (req, res) => {
 router.post('/payBillkey', async (req, res) => {
     try {
         // 빌링키 결제요청전 파트너 인증
-        const {data} = await axios.post(process.env.HOSTNAME + '/node/auth');
+        const {data} = await axios.post(process.env.HOSTNAME + '/payple/auth');
         const accessToken = data.access_token;
         const payData = {
             service_id: process.env.SERVICE_ID,                     // [필수] 파트너 ID
@@ -89,7 +89,7 @@ router.post('/payBillkey', async (req, res) => {
 router.post('/cancel', async (req, res) => {
     try {
         // 결제취소전 파트너 인증
-        const {data} = await axios.post(process.env.HOST_URL + '/node/auth');
+        const {data} = await axios.post(process.env.HOST_URL + '/payple/auth');
         const accessToken = data.access_token;
 
         const cancelData = {
