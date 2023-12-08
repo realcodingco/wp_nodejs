@@ -245,7 +245,7 @@ function requsetGlobalPay(json) {
     obj.isDirect = "";
     obj.serviceDefine = JSON.stringify(json); //결제정보
 
-    axios.post('/node/auth') // 토큰발급 요청
+    axios.post('/payple/auth') // 토큰발급 요청
         .then(res => {
             obj.payCls = res.data.payCls;   // 파트너 인증 토큰발급 응답값으로 오는 payCls 그대로 전송 : 테스트 결제시만 필요
             obj.Authorization = res.data.access_token;  

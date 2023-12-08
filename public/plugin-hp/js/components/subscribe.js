@@ -149,7 +149,7 @@ function cancelPay(data, refundSid) {
         };
         console.log('결제 취소', data, obj, refundSid, user.uid);
         
-        axios.post('/node/cancel', obj)
+        axios.post('/payple/cancel', obj)
         .then(res => {
             console.log(res.data, '<<<');
             
