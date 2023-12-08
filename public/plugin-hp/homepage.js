@@ -47,7 +47,7 @@ const homepage = {
         },
         {
             que : 'I want a refund. How do I do that?',//'환불이 가능한가요?',
-            ans : 'Yes. Anytime within 30 days. <br>In [My account] - [Subscription], click the refund button for the item in the payment history list.<br>There are no refunds after 30 days, so keep that in mind.'//'네. 가능합니다.\n 30일 이내에 언제든지 환불요청을 할 수 있습니다. 환불 문의는 '
+            ans : 'Yes. Anytime within 7 days. <br>In [My account] - [Subscription], click the refund button for the item in the payment history list.<br>There are no refunds after 7 days, so keep that in mind.'//'네. 가능합니다.\n 7일 이내에 언제든지 환불요청을 할 수 있습니다. 환불 문의는 '
         },
         {
             que: 'How do I contact you about a theme or plugin?',

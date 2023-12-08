@@ -108,9 +108,9 @@ function subscribe(scheme) {
                 $(line).find('td')[3].innerText = historyData.state;
 
                 let payDate = new Date(historyData.start); //결제시점
-                payDate.setMonth(payDate.getMonth() + 1); //한달 후
+                payDate.setDate(payDate.getDate() + 7); // 7일 후
                 
-                // refund 기준 : 구입 후 30일 이내, 구독상태 'on'인 경우, 
+                // refund 기준 : 구입 후 7일 이내, 구독상태 'on'인 경우, 
                 // 또는 다음 결제 대기 중인 상태 'wait' - 부분 환불은 없는걸로
                 // wait 구독을 두고,,, on 구독을 환불하는 경우,
                 if(historyData.state == 'on' && historyData.start < payDate.getTime() || historyData.state == 'wait') {// 환불가능한 결제건은 refund 버튼 노출

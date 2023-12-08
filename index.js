@@ -15,7 +15,7 @@ app.use(express.static('public'));
 app.use((req,res,next)=>{ // 2번 미들웨어
     next();
 })
-app.use('/node', require('./routes'));
+app.use('/payple', require('./routes')); //수정
 
 app.get('/plugin-hp', (req, res) => { 
     res.sendFile(path.join(__dirname, '/public/plugin-hp/index.html'));
